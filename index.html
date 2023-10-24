@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
+    <!-- Font-awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/style/style.css">
@@ -15,7 +17,45 @@
     </section>
 
     <!-- HEADER -->
-    <header id="main-header"></header>
+    <header id="main-header">
+        <!-- header logos -->
+        <img src="assets/img/logo-small.svg" alt="logo ridotto spotify" class="logo">
+        <img src="assets/img/logo.svg" alt="logo esteso spotify" class="logo-desktop">
+
+        <nav>
+            <ul class="flex">
+                <li>
+                    <i class="fa-solid fa-house"></i>
+                    <span class="nav-text">Home</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-search"></i>
+                    <span class="nav-text">Cerca</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-lines-leaning fa-flip-horizontal"></i>
+                    <span class="nav-text">La tua libreria</span>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="playlist">
+            <h1>Playlist</h1>
+            <div class="new-playlist flex">
+                <div class="square-plus">+</div>
+                Crea Playlist
+            </div>
+            <ul>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+            </ul>
+        </div>
+    </header>
 
     <!-- MAIN -->
     <main>
@@ -31,16 +71,90 @@
             </ul>
         </header>
 
+        <!-- SECTION RECENTLY PLAYED -->
         <section id="recently-played">
             <h1>Recently played</h1>
+            <div class="wrapper flex">
+                <!-- Card 1 -->
+                <article class="card">
+                    <img src="assets/img/metal_lifting.jpg" alt="sfondo playlist metal">
+                    <h2>Heavy Metal</h2>
+                    <p class="author">Subtitle</p>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <img src="assets/img/stranger.jpeg" alt="copertina soundtrack stranger things">
+                    <h2>Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</h2>
+                    <p class="author">Kyle Dixon & Michael Stein</p>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <img src="assets/img/aquietplace.jpeg" alt="copertina a quiet place">
+                    <h2>A quiet place</h2>
+                    <p class="author">Subtitle</p>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="card">
+                    <img src="assets/img/split.jpeg" alt="copertina split">
+                    <h2>Split</h2>
+                    <p class="author">Subtitle</p>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="card">
+                    <img src="assets/img/cure.jpeg" alt="copertina a cure for wellness">
+                    <h2>A cure for wellness</h2>
+                    <p class="author">Subtitle</p>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="card">
+                    <img src="assets/img/sinister.jpeg" alt="copertina sinister">
+                    <h2>Sinister</h2>
+                    <p class="author">Subtitle</p>
+                </article>
+            </div>
         </section>
 
+        <!-- SECTION CREATE FOR ME -->
         <section id="create-for-me">
             <h1>Creato per John Doe</h1>
+            <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+            <div class="wrapper flex ">
+                <!-- Card 1 -->
+                <article class="card">
+                    <img src="assets/img/radar.jpeg" alt="sfondo playlist release radar">
+                    <h2>Release Radar</h2>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <img src="assets/img/stranger.jpeg" alt="sfondo daily mix 1">
+                    <h2>Daily Mix 1</h2>
+                </article>
+            </div>
         </section>
 
+        <!-- SECTION POPULAR ARTIST -->
         <section id="popular-artist">
             <h1>Artisti piu' popolari</h1>
+            <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+            <div class="wrapper flex">
+                <!-- Card 1 -->
+                <article class="card">
+                    <img src="assets/img/youg.jpeg" alt="sfondo playlist release radar" class="artist-img">
+                    <h2>Lana Del Rey</h2>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <img src="assets/img/einaudi.jpeg" alt="sfondo daily mix 1" class="artist-img">
+                    <h2>Enaiudi</h2>
+                </article>
+            </div>
         </section>
     </main>
 

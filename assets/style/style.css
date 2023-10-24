@@ -1,3 +1,6 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
 /* Reset */
 * {
     margin: 0;
@@ -5,7 +8,12 @@
     box-sizing: border-box;
 }
 
-/* General classes */
+/* * General classes */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
 ul {
     list-style: none;
 }
@@ -23,7 +31,7 @@ ul {
     text-transform: uppercase;
 }
 
-/* Call To Action */
+/* ! Call To Action */
 #call-to-action {
     width: 100%;
     height: 80px;
@@ -36,26 +44,92 @@ ul {
     padding-right: 1rem;
 }
 
-/* Header */
+/* ! Header */
 #main-header {
-    width: 30px;
+    width: 40px;
     height: calc(100vh - 80px);
     z-index: 2;
     position: absolute;
     top: 0;
     left: 0;
     background-color: black;
+    padding: 7px;
+    color: rgb(106, 106, 106);
 }
 
-/* Main */
+#main-header .logo {
+    width: 100%;
+}
+
+#main-header .logo-desktop {
+    display: none;
+    width: 85%;
+}
+
+#main-header nav {
+    margin: 1rem 0;
+}
+
+#main-header nav ul {
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-header nav ul li {
+    padding-bottom: 0.5rem;
+}
+
+
+#main-header nav .nav-text {
+    display: none;
+    font-size: 15px;
+}
+
+#main-header .playlist {
+    display: none;
+}
+
+#main-header .playlist h1 {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 0.5rem;
+
+}
+
+#main-header .new-playlist {
+    font-size: 13px;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#main-header .square-plus {
+    background-color: grey;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+#main-header .playlist ul li {
+    margin-bottom: 1rem;
+    font-size: 13px;
+}
+
+/* ! Main */
 main {
-    width: calc(100vw - 30px);
+    width: calc(100vw - 40px);
     height: calc(100vh - 160px);
     overflow-y: auto;
-    margin-left: 30px;
+    margin-left: 40px;
     margin-top: 80px;
     background-color: rgb(20, 25, 34);
     color: white;
+    padding: 0 1rem;
 }
 
 main header {
@@ -67,8 +141,84 @@ main header ul {
 }
 
 main header ul li {
-    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
     text-transform: uppercase;
+    color: rgb(130, 132, 137);
+}
+
+/* ? Recently Played */
+#recently-played {
+    margin-bottom: 1rem;
+}
+
+#recently-played h1 {
+    margin-bottom: 1rem;
+}
+
+/* ? Create for me */
+#create-for-me {
+    margin-bottom: 1rem;
+}
+
+#create-for-me h1{
+    margin-bottom: 0.5rem;
+}
+
+#create-for-me > p {
+    margin-bottom: 1rem;
+    font-size: 12px;
+    color: grey;
+}
+
+/* ? Popular Artist */
+#popular-artist {
+    margin-bottom: 1rem;
+}
+
+#popular-artist h1{
+    margin-bottom: 0.5rem;
+}
+
+#popular-artist > p {
+    margin-bottom: 1rem;
+    font-size: 12px;
+    color: grey;
+}
+
+#recently-played .wrapper,
+#create-for-me .wrapper,
+#popular-artist .wrapper {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 0.5rem;
+}
+
+/* * Article Card */
+article.card {
+    width: calc(50% - 1rem);
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+article.card img {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+article.card h2 {
+    font-size: 15px;
+    margin-bottom: 0.25rem;
+}
+
+article.card .author {
+    font-size: 10px;
+    font-weight: 300;
+}
+
+article.card .artist-img {
+    border-radius: 50%;
 }
 
 /* Taskbar */
@@ -84,15 +234,66 @@ main header ul li {
 /* Responsive Rules */
 @media screen and (min-width: 576px) {
     #main-header {
-        width: 150px;
+        width: 180px;
     }
 
     main {
-        margin-left: 150px;
-        width: calc(100vw - 150px);
+        margin-left: 180px;
+        width: calc(100vw - 180px);
     }
 
     .button {
         padding: 1rem 3rem;
+    }
+
+    #main-header {
+        padding: 1rem;
+    }
+
+    #main-header .logo-desktop {
+        display: inline-block;
+    }
+
+    #main-header .logo {
+        display: none;
+    }
+
+    #main-header nav ul {
+        align-items: start;
+    }
+
+    #main-header nav .nav-text {
+        display: inline-block;
+    }
+
+    #main-header nav ul li > i {
+        padding-right: 0.5rem;
+    }
+    
+    #main-header nav ul li .fa-lines-leaning {
+        padding-left: 0.5rem;
+        padding-right: 4px;
+    }
+
+    #main-header .playlist {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    article.card {
+        width: calc((100% / 4) - 1rem);
+    }
+
+    #recently-played .wrapper,
+    #create-for-me .wrapper,
+    #popular-artist .wrapper {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    article.card {
+        width: calc((100% / 6) - 1rem);
     }
 }
