@@ -5,6 +5,24 @@
     box-sizing: border-box;
 }
 
+/* General classes */
+ul {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.button {
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 1rem 1.5rem;
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+}
+
 /* Call To Action */
 #call-to-action {
     width: 100%;
@@ -13,10 +31,13 @@
     position: absolute;
     top: 0;
     background-color: rgb(8, 11, 18);
+    text-align: end;
+    line-height: 80px;
+    padding-right: 1rem;
 }
 
 /* Header */
-header {
+#main-header {
     width: 30px;
     height: calc(100vh - 80px);
     z-index: 2;
@@ -37,6 +58,19 @@ main {
     color: white;
 }
 
+main header {
+    padding: 1rem 0;
+}
+main header ul {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main header ul li {
+    margin-left: 1rem;
+    text-transform: uppercase;
+}
+
 /* Taskbar */
 #taskbar {
     width: 100%;
@@ -49,12 +83,16 @@ main {
 
 /* Responsive Rules */
 @media screen and (min-width: 576px) {
-    header {
+    #main-header {
         width: 150px;
     }
 
     main {
         margin-left: 150px;
         width: calc(100vw - 150px);
+    }
+
+    .button {
+        padding: 1rem 3rem;
     }
 }
