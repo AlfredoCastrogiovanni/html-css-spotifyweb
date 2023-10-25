@@ -31,6 +31,12 @@ ul {
     text-transform: uppercase;
 }
 
+.divider {
+    height: 1px;
+    width: 100%;
+    background-color: grey;
+}
+
 /* ! Call To Action */
 #call-to-action {
     width: 100%;
@@ -45,7 +51,7 @@ ul {
 }
 
 /* ! Header */
-#main-header {
+#sidebar {
     width: 40px;
     height: calc(100vh - 80px);
     z-index: 2;
@@ -55,55 +61,57 @@ ul {
     background-color: black;
     padding: 7px;
     color: rgb(106, 106, 106);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
-#main-header .logo {
+#sidebar .logo {
     width: 100%;
 }
 
-#main-header .logo-desktop {
+#sidebar .logo-desktop {
     display: none;
-    width: 85%;
+    height: 50px;
 }
 
-#main-header nav {
-    margin: 1rem 0;
+#sidebar nav {
+    margin-bottom: 1rem;
 }
 
-#main-header nav ul {
+#sidebar nav ul {
     flex-direction: column;
     align-items: center;
+    padding-top: 1rem;
 }
 
-#main-header nav ul li {
+#sidebar nav ul li {
     padding-bottom: 0.5rem;
 }
 
+#sidebar nav ul li > i {
+    font-size: 20px;
+}
 
-#main-header nav .nav-text {
+#sidebar .playlist {
     display: none;
+}
+
+#sidebar .playlist h1 {
     font-size: 15px;
-}
-
-#main-header .playlist {
-    display: none;
-}
-
-#main-header .playlist h1 {
-    font-size: 13px;
     text-transform: uppercase;
     color: white;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 
 }
 
-#main-header .new-playlist {
-    font-size: 13px;
+#sidebar .new-playlist {
+    font-size: 17px;
     align-items: center;
     margin-bottom: 1rem;
 }
 
-#main-header .square-plus {
+#sidebar .square-plus {
     background-color: grey;
     width: 30px;
     height: 30px;
@@ -115,9 +123,38 @@ ul {
     margin-right: 0.5rem;
 }
 
-#main-header .playlist ul li {
+#sidebar .playlist ul li {
     margin-bottom: 1rem;
-    font-size: 13px;
+    font-size: 15px;
+}
+
+#sidebar .user-wrapper {
+    flex-direction: column;
+    align-items: center;
+}
+
+#sidebar .user-wrapper .divider {
+    display: none;
+    margin: 1rem 0;
+    width: calc(240px - 3rem);
+}
+
+#sidebar .user-wrapper .profile .profile-picture {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 50%;
+    margin-top: 1rem;
+}
+
+#sidebar .user-wrapper .profile > .nav-text {
+    vertical-align: super;
+}
+
+#sidebar .nav-text {
+    display: none;
+    font-size: 17px;
 }
 
 /* ! Main */
@@ -233,50 +270,70 @@ article.card .artist-img {
 
 /* Responsive Rules */
 @media screen and (min-width: 576px) {
-    #main-header {
-        width: 180px;
+    #sidebar {
+        width: 240px;
+        align-items: flex-start;
     }
 
     main {
-        margin-left: 180px;
-        width: calc(100vw - 180px);
+        margin-left: 240px;
+        width: calc(100vw - 240px);
     }
 
     .button {
         padding: 1rem 3rem;
     }
 
-    #main-header {
-        padding: 1rem;
+    #sidebar {
+        padding: 1rem 1.5rem;
     }
 
-    #main-header .logo-desktop {
+    #sidebar .logo-desktop {
         display: inline-block;
     }
 
-    #main-header .logo {
+    #sidebar .logo {
         display: none;
     }
 
-    #main-header nav ul {
+    #sidebar nav ul {
         align-items: start;
     }
 
-    #main-header nav .nav-text {
-        display: inline-block;
-    }
-
-    #main-header nav ul li > i {
+    #sidebar nav ul li > i {
         padding-right: 0.5rem;
     }
     
-    #main-header nav ul li .fa-lines-leaning {
+    #sidebar nav ul li .fa-lines-leaning {
         padding-left: 0.5rem;
         padding-right: 4px;
     }
 
-    #main-header .playlist {
+    #sidebar .playlist {
         display: block;
+    }
+
+    #sidebar .user-wrapper {
+        width: calc(240px - 2rem);
+        bottom: 1rem;
+        left: 1rem;
+        align-items: flex-start;
+    }
+
+    #sidebar .user-wrapper .download > i {
+        padding-right: 0.5rem;
+    }
+
+    #sidebar .user-wrapper .divider {
+        display: block;
+    }
+
+    #sidebar .user-wrapper .profile .profile-picture {
+        margin: 0;
+    }
+
+    #sidebar .nav-text {
+        display: inline-block;
     }
 }
 
