@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <!-- Font-awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/style/style.css">
+</head>
+<body>
+    <div class="wrapper flex">
+        <!-- SIDEBAR -->
+        <header id="sidebar" class="flex">
+            <div class="upper-wrapper">
+                <!-- sidebar logos -->
+                <img src="assets/img/logo.svg" alt="logo esteso spotify" class="logo">
+                <img src="assets/img/logo-small.svg" alt="logo ridotto spotify" class="logo-mobile">
+
+                <!-- sidebar navbar -->
+                <nav>
+                    <ul class="flex">
+                        <li>
+                            <i class="fa-solid fa-house"></i>
+                            <span class="sidebar-text">Home</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span class="sidebar-text">Cerca</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-lines-leaning fa-flip-horizontal"></i>
+                            <span class="sidebar-text">La tua libreria</span>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="bottom-wrapper"></div>
+        </header>
+
+        <!-- MAIN -->
+        <main>
+            <!-- CALL TO ACTION -->
+            <section id="CallToAction">
+                <button>Effettua L'upgrade</button>
+            </section>
+
+            <!-- MAIN HEADER -->
+            <header>
+                <ul class="flex">
+                    <li>In evidenza</li>
+                    <li>Podcast</li>
+                    <li>Classifiche</li>
+                    <li>Generi e Mood</li>
+                    <li>Nuove uscite</li>
+                    <li>Scopri</li>
+                </ul>
+            </header>
+
+            <!-- RECENTLY PLAYED -->
+            <section id="RecentlyPlayed">
+                <h1>Recently played</h1>
+                <div class="wrapper flex">
+                    <!-- Card 1 -->
+                    <article class="card">
+                        <div class="img-wrapper">
+                            <img src="assets/img/metal_lifting.jpg" alt="sfondo playlist metal">
+                            <div class="play-hover"><i class="fa-regular fa-circle-play"></i></div>
+                        </div>
+                        <h2>Heavy Metal</h2>
+                        <p class="author">Subtitle</p>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="card">
+                        <div class="img-wrapper">
+                            <img src="assets/img/stranger.jpeg" alt="copertina soundtrack stranger things">
+                            <div class="play-hover"><i class="fa-regular fa-circle-play"></i></div>
+                        </div>
+                        <h2>Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</h2>
+                        <p class="author">Kyle Dixon & Michael Stein</p>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="card">
+                        <div class="img-wrapper">
+                            <img src="assets/img/aquietplace.jpeg" alt="copertina a quiet place">
+                            <div class="play-hover"><i class="fa-regular fa-circle-play"></i></div>
+                        </div>
+                        <h2>A quiet place</h2>
+                        <p class="author">Subtitle</p>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="card">
+                        <div class="img-wrapper">
+                            <img src="assets/img/split.jpeg" alt="copertina split">
+                            <div class="play-hover"><i class="fa-regular fa-circle-play"></i></div>
+                        </div>
+                        <h2>Split</h2>
+                        <p class="author">Subtitle</p>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="card">
+                        <div class="img-wrapper">
+                            <img src="assets/img/cure.jpeg" alt="copertina a cure for wellness">
+                            <div class="play-hover"><i class="fa-regular fa-circle-play"></i></div>
+                        </div>
+                        <h2>A cure for wellness</h2>
+                        <p class="author">Subtitle</p>
+                    </article>
+
+                    <!-- Card 6 -->
+                    <article class="card">
+                        <div class="img-wrapper">
+                            <img src="assets/img/sinister.jpeg" alt="copertina sinister">
+                            <div class="play-hover"><i class="fa-regular fa-circle-play"></i></div>
+                        </div>
+                        <h2>Sinister</h2>
+                        <p class="author">Subtitle</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- CREATE FOR ME -->
+            <section id="CreateForMe">
+                <h1>Creato per John Doe</h1>
+                <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+                <div class="wrapper flex ">
+                    <!-- Card 1 -->
+                    <article class="card">
+                        <div class="img-wrapper">
+                            <img src="assets/img/radar.jpeg" alt="copertina a quiet place">
+                            <div class="play-hover"><i class="fa-regular fa-circle-play"></i></div>
+                        </div>
+                        <h2>Release Radar</h2>
+                    </article>
+    
+                    <!-- Card 2 -->
+                    <article class="card">
+                        <div class="img-wrapper">
+                            <img src="assets/img/mixdaily.jpeg" alt="copertina a quiet place">
+                            <div class="play-hover"><i class="fa-regular fa-circle-play"></i></div>
+                        </div>
+                        <h2>Daily Mix 1</h2>
+                    </article>
+                </div>
+            </section>
+
+            <!-- POPULAR ARTIST -->
+            <section id="PopularArtist">
+                <h1>Artisti piu' popolari</h1>
+                <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+                <div class="wrapper flex">
+                    <!-- Card 1 -->
+                    <article class="card">
+                        <div class="img-wrapper">
+                            <img src="assets/img/youg.jpeg" alt="copertina a quiet place" class="artist-img">
+                            <div class="play-hover"><i class="fa-regular fa-circle-play"></i></div>
+                        </div>
+                        <h2>Lana Del Rey</h2>
+                    </article>
+    
+                    <!-- Card 2 -->
+                    <article class="card">
+                        <div class="img-wrapper">
+                            <img src="assets/img/einaudi.jpeg" alt="copertina a quiet place" class="artist-img">
+                            <div class="play-hover"><i class="fa-regular fa-circle-play"></i></div>
+                        </div>
+                        <h2>Enaiudi</h2>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <!-- TASKBAR -->
+    <section id="taskbar"></section>
+</body>
+</html>

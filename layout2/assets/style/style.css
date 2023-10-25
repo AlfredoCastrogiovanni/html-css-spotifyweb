@@ -1,0 +1,208 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Classes */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+/* SIDEBAR */
+#sidebar {
+    width: 240px;
+    padding: 1.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: black;
+}
+
+#sidebar .logo {
+    height: 45px;
+}
+
+#sidebar .logo-mobile {
+    display: none;
+}
+
+#sidebar nav {
+    margin: 1.5rem 0;
+}
+
+#sidebar nav ul {
+    flex-direction: column;
+    color: rgb(125, 127, 132);
+}
+
+#sidebar nav ul li {
+    margin-bottom: 1rem;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.5s linear;
+}
+
+#sidebar nav ul li:hover {
+    color: white;
+    cursor: pointer;
+}
+
+#sidebar nav ul li > i {
+    padding-right: 0.5rem;
+    font-size: 25px;
+}
+
+#sidebar nav ul li >.fa-lines-leaning {
+    padding: 0 4px 0 0.5rem;
+}
+
+#sidebar nav ul li .sidebar-text {
+    vertical-align: super;
+}
+
+
+/* MAIN */
+main {
+    width: calc(100vw - 240px);
+    height: calc(100vh - 90px);
+    background-color: rgb(20, 25, 34);
+    overflow-y: auto;
+}
+
+main > *:not(#CallToAction, header) {
+    padding-left: 1.5rem;
+}
+
+main h1 {
+    margin-bottom: 0.5rem;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+main #CallToAction {
+    width: 100%;
+    padding: 1.5rem 1rem 1.5rem 0;
+    background-color: rgb(8, 11, 18);
+    text-align: end;
+}
+
+main #CallToAction button {
+    padding: 1rem 3rem;
+    border: 1px solid white;
+    border-radius: 25px;
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: scale 1s linear;
+}
+
+main #CallToAction button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+main header ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+main header ul li {
+    margin: 0 1.5rem 2rem 0;
+    color: rgb(125, 127, 132);
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.5s linear;
+}
+
+main header ul li:hover {
+    color: white;
+    cursor: pointer;
+}
+
+main #RecentlyPlayed h1 {
+    margin-bottom: 1.5rem;
+}
+
+main #RecentlyPlayed,
+main #CreateForMe {
+    margin-bottom: 1rem;
+}
+
+main #CreateForMe > p,
+main #PopularArtist > p {
+    color: rgb(125, 127, 132);
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 1.75rem;
+}
+
+/* Article Card */
+article.card {
+    width: calc((100% / 6) - 1rem);
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+article.card .img-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+article.card .img-wrapper img {
+    width: 100%;
+}
+
+article.card .img-wrapper:hover img {
+    filter: brightness(50%);
+}
+
+article.card .img-wrapper .play-hover {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 100px;
+}
+
+article.card .img-wrapper:hover .play-hover {
+    display: block;
+}
+
+article.card h2 {
+    color: white;
+    font-size: 18px;
+    margin: 0.5rem 0 0.25rem 0;
+}
+
+article.card .author {
+    color: rgb(125, 127, 132);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+article.card .artist-img {
+    border-radius: 50%;
+}
+
+#taskbar {
+    height: 90px;
+    background-color: rgb(40, 40, 40);
+}
