@@ -97,42 +97,61 @@
             <div class="wrapper flex">
                 <!-- Card 1 -->
                 <article class="card">
-                    <img src="assets/img/metal_lifting.jpg" alt="sfondo playlist metal">
+
+                    <div class="img-wrapper">
+                        <img src="assets/img/metal_lifting.jpg" alt="sfondo playlist metal">
+                        <div class="play-hover"><i class="fa-regular fa-circle-play"></i></div>
+                    </div>
                     <h2>Heavy Metal</h2>
                     <p class="author">Subtitle</p>
                 </article>
 
                 <!-- Card 2 -->
                 <article class="card">
-                    <img src="assets/img/stranger.jpeg" alt="copertina soundtrack stranger things">
+                    <div class="img-wrapper">
+                        <img src="assets/img/stranger.jpeg" alt="copertina soundtrack stranger things">
+                        <div class="play-hover"><i class="fa-regular fa-circle-play"></i></div>
+                    </div>
                     <h2>Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</h2>
                     <p class="author">Kyle Dixon & Michael Stein</p>
                 </article>
 
                 <!-- Card 3 -->
                 <article class="card">
-                    <img src="assets/img/aquietplace.jpeg" alt="copertina a quiet place">
+                    <div class="img-wrapper">
+                        <img src="assets/img/aquietplace.jpeg" alt="copertina a quiet place">
+                        <div class="play-hover"><i class="fa-regular fa-circle-play"></i></div>
+                    </div>
                     <h2>A quiet place</h2>
                     <p class="author">Subtitle</p>
                 </article>
 
                 <!-- Card 4 -->
                 <article class="card">
-                    <img src="assets/img/split.jpeg" alt="copertina split">
+                    <div class="img-wrapper">
+                        <img src="assets/img/split.jpeg" alt="copertina split">
+                        <div class="play-hover"><i class="fa-regular fa-circle-play"></i></div>
+                    </div>
                     <h2>Split</h2>
                     <p class="author">Subtitle</p>
                 </article>
 
                 <!-- Card 5 -->
                 <article class="card">
-                    <img src="assets/img/cure.jpeg" alt="copertina a cure for wellness">
+                    <div class="img-wrapper">
+                        <img src="assets/img/cure.jpeg" alt="copertina a cure for wellness">
+                        <div class="play-hover"><i class="fa-regular fa-circle-play"></i></div>
+                    </div>
                     <h2>A cure for wellness</h2>
                     <p class="author">Subtitle</p>
                 </article>
 
                 <!-- Card 6 -->
                 <article class="card">
-                    <img src="assets/img/sinister.jpeg" alt="copertina sinister">
+                    <div class="img-wrapper">
+                        <img src="assets/img/sinister.jpeg" alt="copertina sinister">
+                        <div class="play-hover"><i class="fa-regular fa-circle-play"></i></div>
+                    </div>
                     <h2>Sinister</h2>
                     <p class="author">Subtitle</p>
                 </article>
@@ -146,13 +165,19 @@
             <div class="wrapper flex ">
                 <!-- Card 1 -->
                 <article class="card">
-                    <img src="assets/img/radar.jpeg" alt="sfondo playlist release radar">
+                    <div class="img-wrapper">
+                        <img src="assets/img/radar.jpeg" alt="copertina a quiet place">
+                        <div class="play-hover"><i class="fa-regular fa-circle-play"></i></div>
+                    </div>
                     <h2>Release Radar</h2>
                 </article>
 
                 <!-- Card 2 -->
                 <article class="card">
-                    <img src="assets/img/stranger.jpeg" alt="sfondo daily mix 1">
+                    <div class="img-wrapper">
+                        <img src="assets/img/mixdaily.jpeg" alt="copertina a quiet place">
+                        <div class="play-hover"><i class="fa-regular fa-circle-play"></i></div>
+                    </div>
                     <h2>Daily Mix 1</h2>
                 </article>
             </div>
@@ -165,13 +190,19 @@
             <div class="wrapper flex">
                 <!-- Card 1 -->
                 <article class="card">
-                    <img src="assets/img/youg.jpeg" alt="sfondo playlist release radar" class="artist-img">
+                    <div class="img-wrapper">
+                        <img src="assets/img/youg.jpeg" alt="copertina a quiet place">
+                        <div class="play-hover"><i class="fa-regular fa-circle-play"></i></div>
+                    </div>
                     <h2>Lana Del Rey</h2>
                 </article>
 
                 <!-- Card 2 -->
                 <article class="card">
-                    <img src="assets/img/einaudi.jpeg" alt="sfondo daily mix 1" class="artist-img">
+                    <div class="img-wrapper">
+                        <img src="assets/img/einaudi.jpeg" alt="copertina a quiet place">
+                        <div class="play-hover"><i class="fa-regular fa-circle-play"></i></div>
+                    </div>
                     <h2>Enaiudi</h2>
                 </article>
             </div>
@@ -179,6 +210,58 @@
     </main>
 
     <!-- TASKBAR -->
-    <section id="taskbar"></section>
+    <section id="taskbar">
+        <div class="wrapper flex">
+            <div class="song-info flex">
+                <div class="song-img">
+                    <img src="assets/img/sinister.jpeg" alt="">
+                </div>
+                <div class="song-texts">
+                    <p class="title">Sinister</p>
+                    <p class="song">Brano</p>
+                    <p class="author">Nome</p>
+                </div>
+    
+                <div class="user-buttons flex">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-folder"></i>
+                </div>
+            </div>
+    
+            <div class="playback-buttons flex">
+                <div class="buttons flex">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-regular fa-circle-play"></i>
+                    <i class="fa-solid fa-forward-step"></i>
+                    <i class="fa-solid fa-rotate-right"></i>
+                </div>
+    
+                <div class="progressbar-wrapper flex">
+                    <p>0:25</p>
+                    <div class="bar">
+                        <div class="progress">
+                            <div class="point-hover"></div>
+                        </div>
+                    </div>
+                    <p>4:35</p>
+                </div>
+            </div>
+    
+            <div class="song-buttons flex">
+                <i class="fa-solid fa-list"></i>
+                <i class="fa-solid fa-desktop"></i>
+                <i class="fa-solid fa-volume-high"></i>
+                <div class="bar">
+                    <div class="progress">
+                        <div class="point-hover"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
 </body>
 </html>
+
+
