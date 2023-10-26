@@ -64,15 +64,15 @@
                 <!-- download app -->
                 <div class="download">
                     <i class="fa-regular fa-circle-down"></i>
-                    <span class="nav-text">Installa app</span>
+                    <span class="sidebar-text">Installa app</span>
+                </div>
+                
+                <div class="divider"></div>
 
-                    <div class="divider"></div>
-
-                    <!-- profile -->
-                    <div class="profile">
-                        <img src="assets/img/profile.svg" alt="" class="profile-picture">
-                        <span class="nav-text">John Doe</span>
-                    </div>
+                <!-- profile -->
+                <div class="profile">
+                    <img src="assets/img/profile.svg" alt="" class="profile-picture">
+                    <span class="sidebar-text">John Doe</span>
                 </div>
             </div>
         </header>
@@ -99,7 +99,7 @@
             <!-- RECENTLY PLAYED -->
             <section id="RecentlyPlayed">
                 <h1>Recently played</h1>
-                <div class="wrapper flex">
+                <div class="main-wrapper flex">
                     <!-- Card 1 -->
                     <article class="card">
                         <div class="img-wrapper">
@@ -166,7 +166,7 @@
             <section id="CreateForMe">
                 <h1>Creato per John Doe</h1>
                 <p>Più ascolti, più accurati saranno i suggerimenti.</p>
-                <div class="wrapper flex ">
+                <div class="main-wrapper flex ">
                     <!-- Card 1 -->
                     <article class="card">
                         <div class="img-wrapper">
@@ -191,7 +191,7 @@
             <section id="PopularArtist">
                 <h1>Artisti piu' popolari</h1>
                 <p>Più ascolti, più accurati saranno i suggerimenti.</p>
-                <div class="wrapper flex">
+                <div class="main-wrapper flex">
                     <!-- Card 1 -->
                     <article class="card">
                         <div class="img-wrapper">
@@ -215,6 +215,56 @@
     </div>
 
     <!-- TASKBAR -->
-    <section id="taskbar"></section>
+    <section id="taskbar">
+        <div class="wrapper flex">
+            <!-- song info -->
+            <div class="song-info flex">
+                <div class="song-img">
+                    <img src="assets/img/sinister.jpeg" alt="">
+                </div>
+                <div class="song-texts">
+                    <p class="title">Sinister</p>
+                    <p class="song">Brano</p>
+                    <p class="author">Nome</p>
+                </div>
+                <div class="user-buttons flex">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-folder"></i>
+                </div>
+            </div>
+
+            <!-- playback buttons -->
+            <div class="playback-buttons flex">
+                <div class="buttons flex">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-regular fa-circle-play"></i>
+                    <i class="fa-solid fa-forward-step"></i>
+                    <i class="fa-solid fa-rotate-right"></i>
+                </div>
+                <div class="progressbar-wrapper flex">
+                    <p>0:25</p>
+                    <div class="bar">
+                        <div class="progress">
+                            <div class="point-hover"></div>
+                        </div>
+                    </div>
+                    <p>4:35</p>
+                </div>
+            </div>
+
+            <!-- song buttons -->
+            <div class="song-buttons flex">
+                <i class="fa-solid fa-list"></i>
+                <i class="fa-solid fa-desktop"></i>
+                <i class="fa-solid fa-volume-high"></i>
+                <div class="bar">
+                    <div class="progress">
+                        <div class="point-hover"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

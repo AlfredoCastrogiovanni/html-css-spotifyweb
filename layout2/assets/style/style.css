@@ -21,10 +21,38 @@ ul {
     display: flex;
 }
 
+.bar {
+    width: 80%;
+    height: 5px;
+    border-radius: 25px;
+    background-color: grey;
+    position: relative;
+}
+
+.progress {
+    width: 45%;
+    height: 5px;
+    border-radius: 25px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.point-hover {
+    display: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+}
+
 /* SIDEBAR */
 #sidebar {
     width: 240px;
-    /* padding: 1.5rem; */
     flex-direction: column;
     justify-content: space-between;
     background-color: black;
@@ -76,7 +104,6 @@ ul {
 }
 
 #sidebar .playlist {
-    /* display: none; */
     padding-left: 1.5rem;
 }
 
@@ -164,7 +191,7 @@ ul {
     object-position: center;
 }
 
-#sidebar .profile > .nav-text {
+#sidebar .profile > .sidebar-text {
     color: white;
     font-weight: 800;
     vertical-align: super;
@@ -229,6 +256,10 @@ main header ul li {
 main header ul li:hover {
     color: white;
     cursor: pointer;
+}
+
+main .main-wrapper {
+    flex-wrap: wrap;
 }
 
 main #RecentlyPlayed h1 {
@@ -299,7 +330,248 @@ article.card .artist-img {
     border-radius: 50%;
 }
 
+/* Taskbar */
 #taskbar {
     height: 90px;
     background-color: rgb(40, 40, 40);
+    color: white;
+}
+
+#taskbar .wrapper {
+    height: 100%;
+    margin: 0 0.75rem;
+    justify-content: space-between;
+}
+
+#taskbar .song-info {
+    height: 100%;
+    align-items: center;
+}
+
+#taskbar .song-info .song-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 0.5rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+#taskbar .song-info .song-img img {
+    width: 50px;
+}
+
+#taskbar .song-info .song-texts {
+    margin-right: 1.5rem;
+}
+
+#taskbar .song-info .song-texts .title {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+#taskbar .song-info .song-texts .song,
+#taskbar .song-info .song-texts .author {
+    display: inline-block;
+    color: rgb(125, 127, 132);
+    font-size: 10px;
+    font-weight: 600;
+}
+
+#taskbar .song-info .user-buttons {
+    align-items: center;
+    color: rgb(125, 127, 132);
+    font-size: 15px;
+}
+
+#taskbar .song-info .user-buttons > i:first-of-type {
+    margin-right: 1rem;
+}
+
+#taskbar .song-info .user-buttons > i:hover {
+    color: white;
+    cursor: pointer;
+}
+
+#taskbar .playback-buttons {
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#taskbar .playback-buttons .buttons {
+    margin-bottom: 0.5rem;
+}
+
+#taskbar .playback-buttons .buttons > i {
+    font-size: 18px;
+}
+
+#taskbar .playback-buttons .buttons .fa-backward-step {
+    margin-left: 1.5rem;
+}
+
+#taskbar .playback-buttons .buttons .fa-forward-step {
+    margin-right: 1.5rem;
+}
+
+#taskbar .playback-buttons .buttons .fa-circle-play {
+    position: relative;
+    bottom: 6px;
+    margin: 0 2rem;
+    font-size: 30px;
+}
+
+#taskbar .playback-buttons .buttons .fa-circle-play:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#taskbar .playback-buttons .progressbar-wrapper {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#taskbar .playback-buttons .progressbar-wrapper > p {
+    font-size: 10px;
+}
+
+#taskbar .playback-buttons .progressbar-wrapper .bar {
+    width: 80%;
+    margin: 0 0.75rem;
+}
+
+#taskbar .playback-buttons .progressbar-wrapper .bar .progress {
+    position: relative;
+}
+
+#taskbar .playback-buttons .bar .progress:hover .point-hover {
+    display: block;
+}
+
+#taskbar .playback-buttons .progressbar-wrapper .bar .progress:hover {
+    background-color: rgb(187, 244, 92);
+}
+
+#taskbar .song-buttons {
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#taskbar .song-buttons > i {
+    margin-right: 1rem;
+    font-size: 15px;
+}
+
+#taskbar .song-buttons .bar {
+    width: 90px;
+    position: relative;
+}
+
+#taskbar .song-buttons .bar .progress:hover .point-hover {
+    display: block;
+}
+
+#taskbar .song-buttons .bar .progress:hover {
+    background-color: rgb(187, 244, 92);
+}
+
+
+
+
+#taskbar .song-info,
+#taskbar .song-buttons {
+    width: 30%;
+}
+
+#taskbar .playback-buttons {
+    width: 40%;
+}
+
+/* Responsive Rules */
+@media screen and (max-width: 992px) {
+    article.card {
+        width: calc((100% / 4) - 1rem);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    article.card {
+        width: calc((100% / 2) - 1rem);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #sidebar {
+        width: 40px;
+    }
+
+    main {
+        width: calc(100vw - 40px);
+    }
+
+    #sidebar .upper-wrapper .logo {
+        display: none;
+    }
+
+    #sidebar .upper-wrapper .logo-mobile {
+        display: inline-block;
+        margin: 0.5rem 0.25rem 0 0.25rem
+    }
+
+    #sidebar nav {
+        margin: 0.75rem 0;
+    }
+
+    #sidebar .sidebar-text {
+        display: none;
+    }
+
+    #sidebar nav ul {
+        align-items: center;
+    }
+
+    #sidebar nav ul li {
+        padding: 0;
+    }
+
+    #sidebar nav ul li > i {
+        padding: 0 0.25rem;
+    }
+
+    #sidebar nav ul li > .fa-lines-leaning {
+        padding-right: 10px;
+    }
+
+    #sidebar .playlist {
+        display: none;
+    }
+
+    #sidebar .bottom-wrapper {
+        padding: 0;
+    }
+
+    #sidebar .download {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    #sidebar .download > i {
+        padding: 0;
+    }
+
+    #sidebar .divider {
+        display: none;
+    }
+
+    #sidebar .profile {
+        text-align: center;
+    }
+
+    #sidebar .profile .profile-picture {
+        margin: 0;
+    }
 }
