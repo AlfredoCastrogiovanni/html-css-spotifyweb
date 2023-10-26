@@ -378,7 +378,6 @@ article.card .artist-img {
 }
 
 #taskbar .song-info .user-buttons {
-    align-items: center;
     color: rgb(125, 127, 132);
     font-size: 15px;
 }
@@ -467,7 +466,7 @@ article.card .artist-img {
 }
 
 #taskbar .song-buttons .bar {
-    width: 90px;
+    width: 80px;
     position: relative;
 }
 
@@ -478,9 +477,6 @@ article.card .artist-img {
 #taskbar .song-buttons .bar .progress:hover {
     background-color: rgb(187, 244, 92);
 }
-
-
-
 
 #taskbar .song-info,
 #taskbar .song-buttons {
@@ -501,6 +497,18 @@ article.card .artist-img {
 @media screen and (max-width: 768px) {
     article.card {
         width: calc((100% / 2) - 1rem);
+    }
+
+    #taskbar .song-info .user-buttons {
+        flex-direction: column;
+    }
+
+    #taskbar .song-info .user-buttons > i:first-of-type {
+        margin: 0 0 0.5rem 0;
+    }
+
+    #taskbar .song-buttons > i {
+        margin-right: 0.5rem;
     }
 }
 
@@ -573,5 +581,14 @@ article.card .artist-img {
 
     #sidebar .profile .profile-picture {
         margin: 0;
+    }
+
+    #taskbar .song-info .song-texts {
+        margin-right: 0.5rem;
+    }
+
+    #taskbar .song-info .song-texts .song,
+    #taskbar .song-info .song-texts .author {
+        display: block;
     }
 }
